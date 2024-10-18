@@ -38,10 +38,12 @@ p {
 	line-height: 25px;
 }
 .section-one {
-	display: flex;
-	gap: 20px;
 	padding: 50px 0;
 	position: relative;
+}
+.section-one__container {
+	display: flex;
+	gap: 20px;
 }
 .section-one__content {
 	flex: 0 1 100%;
@@ -162,12 +164,15 @@ p {
 	width: 30px;
 }
 .section-five {
-	height: 800px;
-	background-position: bottom;
 	position: relative;
+}
+.section-five__container {
 	background-image: url('images/group-image.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: bottom;
+
+	height: 800px;
 }
 .section-five__content {
 	width: 45%;
@@ -182,6 +187,7 @@ p {
 }
 .section-six {
 	display: flex;
+	padding: 40px 0;
 	gap: 25px;
 }
 .section-seven {
@@ -211,13 +217,13 @@ p {
 }
 
 @media (max-width: 1200px) {
-	.section-five {
+	.section-five__container {
 		background-position: right;
 		background-size: contain;
 	}
 }
 @media (max-width: 1024px) {
-	.section-one {
+	.section-one__container {
 		flex-direction: column;
 	}
 	.section-one__image {
@@ -323,7 +329,7 @@ p {
 	h4 {
 		font-size: 18px;
 	}
-	.section-five {
+	.section-five__container {
 		height: auto;
 		background: none;
 	}
